@@ -7,11 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog</title>
 
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="/app.css">
 </head>
 
 <body>
-    <article>
+    @foreach ($posts as $post)
+        <article>
+            <?= $post ?>
+        </article>
+    @endforeach
+
+    {{-- <article>
         <h1>
             <a href="/posts/post1">Post #1</a>
         </h1>
@@ -37,7 +43,7 @@
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo impedit adipisci deleniti enim ut ullam
             aliquam...
         </p>
-    </article>
+    </article> --}}
 </body>
 
 </html>
